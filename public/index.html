@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>일별 영업활동 보고(10월)</title>
+<style>
+:root{--blue:#1F4E79;--lblue:#DEEAF6;--line:#BFBFBF;--gray:#F2F2F2;--txt:#222;--sub:#595959}
+*{box-sizing:border-box}
+body{margin:0;background:#E6EBF1;font-family:"맑은 고딕","Malgun Gothic","Apple SD Gothic Neo",sans-serif;font-size:12px;color:var(--txt);line-height:1.45}
+.tools{max-width:297mm;margin:14px auto 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:0 4px}
+.tools .hint{font-size:12px;color:var(--sub);flex:1 1 100%}#save-status{font-size:11px;color:#26734d;padding:0 4px}
+button{font:inherit;padding:6px 12px;border:1px solid var(--blue);background:#fff;color:var(--blue);border-radius:4px;cursor:pointer}
+button:hover{background:var(--lblue)}
+.page{width:297mm;min-height:210mm;margin:14px auto;padding:10mm;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.18)}
+h1{margin:0 0 4px;font-size:23px;letter-spacing:.04em;color:var(--blue)}
+.meta{color:var(--sub);padding-bottom:8px;border-bottom:3px solid var(--blue);margin-bottom:2px}
+h2{font-size:14px;color:var(--blue);margin:16px 0 6px}
+.focus{border:1px solid var(--line);padding:6px 10px}
+.focus ul{margin:0;padding-left:16px}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th,td{border:1px solid var(--line);padding:3px 6px;vertical-align:middle;word-break:keep-all;overflow-wrap:anywhere}
+thead th{background:var(--blue);color:#fff;font-weight:700;text-align:center}
+th.date{background:var(--lblue);text-align:center}
+th.date span{display:block;font-size:10.5px;font-weight:400;color:var(--sub)}
+th.who{background:var(--lblue);text-align:center}
+tr.off th.date,tr.off td{background:var(--gray)}
+.offtxt{text-align:center;color:#7f7f7f}
+tr.first th,tr.first td{border-top:2px solid var(--blue)}
+.ed{min-height:28px;outline:none;white-space:pre-wrap}
+.ed.tall{min-height:70px}
+.ed:focus{background:#FFFBE6}
+.plan-select{width:100%;min-height:28px;border:0;background:transparent;color:var(--txt);font:inherit;padding:2px 3px;outline:none;cursor:pointer}.plan-select:focus{background:#FFFBE6}.plan-detail{display:block;width:100%;min-width:0;min-height:24px;margin-top:3px;border:1px solid #d4d9e1;border-radius:3px;padding:3px 5px;font:inherit;font-size:11px;background:#fff;color:var(--txt)}.plan-detail:focus{outline:1px solid var(--blue);background:#FFFBE6}.plan-detail::placeholder{color:#999}
+.report-actions{margin:4px 0}.report-summary{min-height:70px;border:1px solid var(--line);padding:7px 9px;white-space:pre-wrap}.report-summary:empty:before{content:attr(data-placeholder);color:#999}.summary-inputs{display:grid;grid-template-columns:1fr;gap:2px}.daily-summary-total{border-top:1px solid #dce2eb;margin-top:3px;padding-top:3px;font-size:10px;font-weight:700;color:var(--blue)}.summary-inputs label{display:flex;align-items:center;justify-content:space-between;gap:4px;font-size:10px;color:var(--sub)}.summary-number{width:54px;min-height:20px;border:1px solid #d4d9e1;border-radius:3px;padding:1px 3px;text-align:right;font:inherit;color:var(--txt);background:#fff}
+.num{text-align:center} .ed.num{min-height:20px}
+tr.sum th,tr.sum td{background:var(--gray);font-weight:700}
+.cont{color:var(--sub);font-size:11px;margin:0 0 4px}
+@media print{
+ @page{size:A4 landscape;margin:0}
+ body{background:#fff}
+ .tools{display:none}
+ .page{margin:0;box-shadow:none;break-after:page}
+ .page:last-of-type{break-after:auto}
+ tr{break-inside:avoid} thead{display:table-header-group}
+ .ed:focus{background:none}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+@media (max-width:317mm){ body{overflow-x:auto} }
+</style></head><body>
+<div class="tools"><button type="button" id="print">인쇄 / PDF 저장 (A4)</button><button type="button" id="export-csv">엑셀용 CSV 저장</button><span id="save-status" aria-live="polite">공용 서버 연결 중…</span><span class="hint">칸을 클릭해 바로 입력하면 이 브라우저에 자동 저장됩니다. 인쇄 시 용지는 A4 가로, 여백은 "없음"으로 설정하세요.</span></div>
+
+<section class="page">
+<h1>일별 영업활동 보고(10월)</h1>
+<div class="meta">보고 기간: 2026.10.22(목) ~ 10.30(금)</div>
+<h2>1. 기간 중점 추진 사항</h2>
+<div class="focus"><ul>
+<li>10월 마감 전 계약 가능성이 높은 진행 건 우선 관리 및 최종 의사결정 일정 확인</li>
+<li>견적 제출·검토 고객 대상 후속 연락을 통해 계약 조건 협의 및 발주 일정 구체화</li>
+<li>추가 계약·라이선스·모듈 수요 발굴 및 기존 고객 대상 추가 수주 기회 확보</li>
+<li>계약 지연 요인 및 내부 지원 필요사항을 조기 파악해 월내 수주 가능 건 집중 대응</li>
+</ul></div>
+<h2>2. 일별 영업활동 계획 및 결과 (직원별)</h2><p class="cont">※ 10월 마감 및 월내 수주 확보를 위한 계획 예시입니다. 실제 진행 건·발주 가능 일정에 맞게 수정하고, 활동 결과·실적은 진행 후 별도로 입력하세요.</p>
+<table><colgroup><col style="width:14%"><col style="width:14%"><col style="width:30%"><col style="width:26%"><col style="width:16%"></colgroup><thead><tr><th>일자</th><th>담당자</th><th>영업활동 계획</th><th>활동 결과</th><th>실적요약</th></tr></thead><tbody><tr class="blk first"><th class="date" rowspan="4"><b>10/22(목)</b></th><th class="who">김종현 대리</th><td><select class="ed plan-select" data-k="c1" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c1-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="10월 수주 가능 건별 계약 단계·예상 금액·발주 일정 점검 및 우선순위 재정리"></td><td><div class="ed " contenteditable="true" data-k="c2"></div></td><td><div class="summary-inputs" data-summary-row="c3"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c3-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c3-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c3-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c3">합계 0건</div></div></td></tr><tr class="blk"><th class="who">조문영 대리</th><td><select class="ed plan-select" data-k="c4" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근">외근</option><option value="내근/외근" selected>내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c4-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="계약 검토 고객 유선 확인 및 월내 발주 가능 여부·의사결정 일정 협의"></td><td><div class="ed " contenteditable="true" data-k="c5"></div></td><td><div class="summary-inputs" data-summary-row="c6"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c6-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c6-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c6-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c6">합계 0건</div></div></td></tr><tr class="blk"><th class="who">최지은 사원</th><td><select class="ed plan-select" data-k="c7" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근" selected>외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c7-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="핵심 계약 예정 고객 방문, 최종 요구사항 및 계약 조건 확인"></td><td><div class="ed " contenteditable="true" data-k="c8"></div></td><td><div class="summary-inputs" data-summary-row="c9"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c9-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c9-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c9-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c9">합계 0건</div></div></td></tr><tr class="blk"><th class="who">황혜진 사원</th><td><select class="ed plan-select" data-k="c10" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c10-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="견적 제출 고객 후속 연락, 가격·도입 일정 관련 미결 사항 해소"></td><td><div class="ed " contenteditable="true" data-k="c11"></div></td><td><div class="summary-inputs" data-summary-row="c12"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c12-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c12-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c12-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c12">합계 0건</div></div></td></tr><tr class="blk first"><th class="date" rowspan="4"><b>10/23(금)</b></th><th class="who">김종현 대리</th><td><select class="ed plan-select" data-k="c13" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c13-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="월내 계약 가능 고객 대상 발주 의사 확인 및 계약 서류 준비사항 안내"></td><td><div class="ed " contenteditable="true" data-k="c14"></div></td><td><div class="summary-inputs" data-summary-row="c15"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c15-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c15-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c15-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c15">합계 0건</div></div></td></tr><tr class="blk"><th class="who">조문영 대리</th><td><select class="ed plan-select" data-k="c16" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근" selected>외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c16-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="계약 임박 고객 방문 미팅을 통한 최종 검토 의견 확인 및 발주 일정 확정 추진"></td><td><div class="ed " contenteditable="true" data-k="c17"></div></td><td><div class="summary-inputs" data-summary-row="c18"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c18-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c18-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c18-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c18">합계 0건</div></div></td></tr><tr class="blk"><th class="who">최지은 사원</th><td><select class="ed plan-select" data-k="c19" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근">외근</option><option value="내근/외근" selected>내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c19-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="기존 고객 추가 모듈·라이선스 수요 확인 및 월내 추가 발주 가능 건 협의"></td><td><div class="ed " contenteditable="true" data-k="c20"></div></td><td><div class="summary-inputs" data-summary-row="c21"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c21-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c21-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c21-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c21">합계 0건</div></div></td></tr><tr class="blk"><th class="who">황혜진 사원</th><td><select class="ed plan-select" data-k="c22" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c22-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="진행 중인 영업 건별 계약 지연 요인 확인 및 해결을 위한 내부 협조 요청"></td><td><div class="ed " contenteditable="true" data-k="c23"></div></td><td><div class="summary-inputs" data-summary-row="c24"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c24-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c24-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c24-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c24">합계 0건</div></div></td></tr><tr class="blk first"><th class="date" rowspan="4"><b>10/26(월)</b></th><th class="who">김종현 대리</th><td><select class="ed plan-select" data-k="c25" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c25-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="견적 검토 중인 고객 담당자와 도입 결정 일정 및 남은 검토 절차 확인"></td><td><div class="ed " contenteditable="true" data-k="c26"></div></td><td><div class="summary-inputs" data-summary-row="c27"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c27-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c27-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c27-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c27">합계 0건</div></div></td></tr><tr class="blk"><th class="who">조문영 대리</th><td><select class="ed plan-select" data-k="c28" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근" selected>외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c28-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="주요 고객사 방문, 최종 견적 및 계약 조건 협의 후 다음 단계 확정"></td><td><div class="ed " contenteditable="true" data-k="c29"></div></td><td><div class="summary-inputs" data-summary-row="c30"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c30-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c30-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c30-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c30">합계 0건</div></div></td></tr><tr class="blk"><th class="who">최지은 사원</th><td><select class="ed plan-select" data-k="c31" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c31-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="발주 예정 고객 대상 구매·계약 담당자 확인 및 발주 절차 안내"></td><td><div class="ed " contenteditable="true" data-k="c32"></div></td><td><div class="summary-inputs" data-summary-row="c33"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c33-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c33-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c33-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c33">합계 0건</div></div></td></tr><tr class="blk"><th class="who">황혜진 사원</th><td><select class="ed plan-select" data-k="c34" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근">외근</option><option value="내근/외근" selected>내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c34-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="계약 조건 미합의 고객과 가격·범위·도입 일정 조율"></td><td><div class="ed " contenteditable="true" data-k="c35"></div></td><td><div class="summary-inputs" data-summary-row="c36"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c36-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c36-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c36-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c36">합계 0건</div></div></td></tr><tr class="blk first"><th class="date" rowspan="4"><b>10/27(화)</b></th><th class="who">김종현 대리</th><td><select class="ed plan-select" data-k="c37" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c37-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="월내 수주 가능성 기준으로 영업 파이프라인 재점검 및 당일 후속 조치 실행"></td><td><div class="ed " contenteditable="true" data-k="c38"></div></td><td><div class="summary-inputs" data-summary-row="c39"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c39-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c39-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c39-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c39">합계 0건</div></div></td></tr><tr class="blk"><th class="who">조문영 대리</th><td><select class="ed plan-select" data-k="c40" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근" selected>외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c40-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="의사결정권자 미팅을 통해 도입 의사·예산·발주 시점 최종 확인"></td><td><div class="ed " contenteditable="true" data-k="c41"></div></td><td><div class="summary-inputs" data-summary-row="c42"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c42-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c42-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c42-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c42">합계 0건</div></div></td></tr><tr class="blk"><th class="who">최지은 사원</th><td><select class="ed plan-select" data-k="c43" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c43-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="회신 지연 고객 재접촉 및 계약 진행 여부·보류 사유 파악"></td><td><div class="ed " contenteditable="true" data-k="c44"></div></td><td><div class="summary-inputs" data-summary-row="c45"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c45-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c45-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c45-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c45">합계 0건</div></div></td></tr><tr class="blk"><th class="who">황혜진 사원</th><td><select class="ed plan-select" data-k="c46" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c46-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="최종 견적서·제안 자료 보완 및 계약 검토 요청사항 신속 대응"></td><td><div class="ed " contenteditable="true" data-k="c47"></div></td><td><div class="summary-inputs" data-summary-row="c48"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c48-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c48-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c48-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c48">합계 0건</div></div></td></tr><tr class="blk first"><th class="date" rowspan="4"><b>10/28(수)</b></th><th class="who">김종현 대리</th><td><select class="ed plan-select" data-k="c49" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근">외근</option><option value="내근/외근" selected>내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c49-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="발주 가능 고객과 최종 조건 확인 및 필요한 경우 방문 협의 진행"></td><td><div class="ed " contenteditable="true" data-k="c50"></div></td><td><div class="summary-inputs" data-summary-row="c51"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c51-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c51-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c51-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c51">합계 0건</div></div></td></tr><tr class="blk"><th class="who">조문영 대리</th><td><select class="ed plan-select" data-k="c52" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근" selected>외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c52-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="계약 진행 고객 방문, 미결 요구사항 확인 및 월내 계약 체결 일정 협의"></td><td><div class="ed " contenteditable="true" data-k="c53"></div></td><td><div class="summary-inputs" data-summary-row="c54"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c54-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c54-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c54-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c54">합계 0건</div></div></td></tr><tr class="blk"><th class="who">최지은 사원</th><td><select class="ed plan-select" data-k="c55" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c55-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="월말 전 발주 가능 고객군 재선별 및 담당자별 집중 연락 진행"></td><td><div class="ed " contenteditable="true" data-k="c56"></div></td><td><div class="summary-inputs" data-summary-row="c57"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c57-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c57-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c57-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c57">합계 0건</div></div></td></tr><tr class="blk"><th class="who">황혜진 사원</th><td><select class="ed plan-select" data-k="c58" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c58-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="계약 예정 고객의 내부 결재·구매 절차 진행 현황 확인"></td><td><div class="ed " contenteditable="true" data-k="c59"></div></td><td><div class="summary-inputs" data-summary-row="c60"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c60-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c60-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c60-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c60">합계 0건</div></div></td></tr></tbody></table>
+</section>
+
+<section class="page">
+<p class="cont">2. 일별 영업활동 계획 및 결과 (계속)</p>
+<table><colgroup><col style="width:14%"><col style="width:14%"><col style="width:30%"><col style="width:26%"><col style="width:16%"></colgroup><thead><tr><th>일자</th><th>담당자</th><th>영업활동 계획</th><th>활동 결과</th><th>실적요약</th></tr></thead><tbody><tr class="blk first"><th class="date" rowspan="4"><b>10/29(목)</b></th><th class="who">김종현 대리</th><td><select class="ed plan-select" data-k="c61" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근">외근</option><option value="내근/외근" selected>내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c61-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="추가 수주 가능 기존 고객 접촉 및 추가 라이선스·모듈 발주 일정 협의"></td><td><div class="ed " contenteditable="true" data-k="c62"></div></td><td><div class="summary-inputs" data-summary-row="c63"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c63-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c63-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c63-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c63">합계 0건</div></div></td></tr><tr class="blk"><th class="who">조문영 대리</th><td><select class="ed plan-select" data-k="c64" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c64-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="계약 지연 건의 원인·담당자·해결 기한 정리 및 당일 대응"></td><td><div class="ed " contenteditable="true" data-k="c65"></div></td><td><div class="summary-inputs" data-summary-row="c66"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c66-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c66-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c66-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c66">합계 0건</div></div></td></tr><tr class="blk"><th class="who">최지은 사원</th><td><select class="ed plan-select" data-k="c67" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근" selected>외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c67-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="핵심 발주 예정 고객 방문 및 최종 의사결정·계약 일정 확정 추진"></td><td><div class="ed " contenteditable="true" data-k="c68"></div></td><td><div class="summary-inputs" data-summary-row="c69"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c69-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c69-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c69-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c69">합계 0건</div></div></td></tr><tr class="blk"><th class="who">황혜진 사원</th><td><select class="ed plan-select" data-k="c70" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c70-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="미결 견적 고객 전수 후속 연락 및 월내 발주 가능 여부 재확인"></td><td><div class="ed " contenteditable="true" data-k="c71"></div></td><td><div class="summary-inputs" data-summary-row="c72"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c72-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c72-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c72-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c72">합계 0건</div></div></td></tr><tr class="blk first"><th class="date" rowspan="4"><b>10/30(금)</b></th><th class="who">김종현 대리</th><td><select class="ed plan-select" data-k="c73" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c73-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="월말 수주 예상 건 최종 점검, 발주 확정 고객과 미확정 고객 구분 관리"></td><td><div class="ed " contenteditable="true" data-k="c74"></div></td><td><div class="summary-inputs" data-summary-row="c75"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c75-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c75-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c75-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c75">합계 0건</div></div></td></tr><tr class="blk"><th class="who">조문영 대리</th><td><select class="ed plan-select" data-k="c76" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근">외근</option><option value="내근/외근" selected>내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c76-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="발주 확정 고객 계약 서류·견적 최종 확인 및 진행 단계별 장애요인 해소"></td><td><div class="ed " contenteditable="true" data-k="c77"></div></td><td><div class="summary-inputs" data-summary-row="c78"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c78-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c78-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c78-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c78">합계 0건</div></div></td></tr><tr class="blk"><th class="who">최지은 사원</th><td><select class="ed plan-select" data-k="c79" aria-label="영업활동 계획"><option value=""></option><option value="내근">내근</option><option value="외근" selected>외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c79-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="마감 핵심 고객 최종 방문·협의 및 월내 발주 확정 추진"></td><td><div class="ed " contenteditable="true" data-k="c80"></div></td><td><div class="summary-inputs" data-summary-row="c81"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c81-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c81-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c81-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c81">합계 0건</div></div></td></tr><tr class="blk"><th class="who">황혜진 사원</th><td><select class="ed plan-select" data-k="c82" aria-label="영업활동 계획"><option value=""></option><option value="내근" selected>내근</option><option value="외근">외근</option><option value="내근/외근">내근/외근</option></select><input class="ed plan-detail" type="text" data-k="c82-detail" aria-label="영업활동 계획 상세 입력" placeholder="세부 활동 입력" value="10월 수주 실적 마감 점검 및 미완료 계약 건 후속 조치·익월 이관사항 정리"></td><td><div class="ed " contenteditable="true" data-k="c83"></div></td><td><div class="summary-inputs" data-summary-row="c84"><label>TM <input class="ed summary-number" type="number" min="0" step="1" data-k="c84-tm" aria-label="TM 건수"></label><label>방문 <input class="ed summary-number" type="number" min="0" step="1" data-k="c84-visit" aria-label="방문 건수"></label><label>계약 <input class="ed summary-number" type="number" min="0" step="1" data-k="c84-contract" aria-label="계약 건수"></label><div class="daily-summary-total" id="row-c84">합계 0건</div></div></td></tr></tbody></table>
+<h2>3. 일별 요약</h2>
+<p class="cont">일별 영업활동의 실적요약에 입력한 TM·방문·계약 건수를 날짜별로 자동 합산합니다.</p>
+<table class="daily-totals"><colgroup><col style="width:28%"><col style="width:18%"><col style="width:18%"><col style="width:18%"><col style="width:18%"></colgroup>
+<thead><tr><th>일자</th><th>TM 건수</th><th>방문 건수</th><th>계약 건수</th><th>총 건수</th></tr></thead>
+<tbody>
+<tr><th class="date">10/22(목)</th><td class="num" id="day-0-tm">0</td><td class="num" id="day-0-visit">0</td><td class="num" id="day-0-contract">0</td><td class="num" id="day-0-total">0</td></tr>
+<tr><th class="date">10/23(금)</th><td class="num" id="day-1-tm">0</td><td class="num" id="day-1-visit">0</td><td class="num" id="day-1-contract">0</td><td class="num" id="day-1-total">0</td></tr>
+<tr><th class="date">10/26(월)</th><td class="num" id="day-2-tm">0</td><td class="num" id="day-2-visit">0</td><td class="num" id="day-2-contract">0</td><td class="num" id="day-2-total">0</td></tr>
+<tr><th class="date">10/27(화)</th><td class="num" id="day-3-tm">0</td><td class="num" id="day-3-visit">0</td><td class="num" id="day-3-contract">0</td><td class="num" id="day-3-total">0</td></tr>
+<tr><th class="date">10/28(수)</th><td class="num" id="day-4-tm">0</td><td class="num" id="day-4-visit">0</td><td class="num" id="day-4-contract">0</td><td class="num" id="day-4-total">0</td></tr>
+<tr><th class="date">10/29(목)</th><td class="num" id="day-5-tm">0</td><td class="num" id="day-5-visit">0</td><td class="num" id="day-5-contract">0</td><td class="num" id="day-5-total">0</td></tr>
+<tr><th class="date">10/30(금)</th><td class="num" id="day-6-tm">0</td><td class="num" id="day-6-visit">0</td><td class="num" id="day-6-contract">0</td><td class="num" id="day-6-total">0</td></tr>
+<tr class="sum"><th class="who">합계</th><td class="num" id="grand-tm">0</td><td class="num" id="grand-visit">0</td><td class="num" id="grand-contract">0</td><td class="num" id="grand-total">0</td></tr>
+</tbody></table>
+<h2>4. 직원별 주요 성과·이슈 및 향후 계획</h2>
+<table><colgroup><col style="width:16%"><col style="width:42%"><col style="width:42%"></colgroup>
+<thead><tr><th>담당자</th><th>주요 성과 및 이슈</th><th>향후 계획 (11월 초)</th></tr></thead>
+<tbody><tr><th class="who">김종현 대리</th><td><div class="ed tall" contenteditable="true" data-k="c105"></div></td><td><div class="ed tall" contenteditable="true" data-k="c106"></div></td></tr><tr><th class="who">조문영 대리</th><td><div class="ed tall" contenteditable="true" data-k="c107"></div></td><td><div class="ed tall" contenteditable="true" data-k="c108"></div></td></tr><tr><th class="who">최지은 사원</th><td><div class="ed tall" contenteditable="true" data-k="c109"></div></td><td><div class="ed tall" contenteditable="true" data-k="c110"></div></td></tr><tr><th class="who">황혜진 사원</th><td><div class="ed tall" contenteditable="true" data-k="c111"></div></td><td><div class="ed tall" contenteditable="true" data-k="c112"></div></td></tr></tbody></table>
+
+<h2>4. 보고용 요약 자동 생성</h2>
+<p class="cont">입력한 기간 실적과 직원별 주요 성과·이슈를 바탕으로 보고용 문장 초안을 생성합니다. 생성 후 문장은 직접 수정할 수 있습니다.</p>
+<div class="report-actions"><button type="button" id="generate-summary">보고용 요약 생성 / 갱신</button></div>
+<div class="ed report-summary" contenteditable="true" data-k="report-summary" aria-label="보고용 요약" data-placeholder="버튼을 눌러 보고용 요약을 생성하세요."></div>
+</section>
+
+<script>
+(function(){
+ var KEY="sales-report-1022-1030", cells=Array.prototype.slice.call(document.querySelectorAll(".ed")), status=document.getElementById("save-status");
+ var API="/.netlify/functions/report-data", pending={}, lastSeen={}, timers={}, serverReady=false, polling=false;
+ var localKey=KEY+"-local";
+ function getValue(c){return (c.tagName==="SELECT" || c.tagName==="INPUT") ? c.value : c.textContent;}
+ function setValue(c,v){if(c.tagName==="SELECT" || c.tagName==="INPUT") c.value=v; else c.textContent=v;}
+ function localSave(){
+  var o={}; cells.forEach(function(c){var v=getValue(c); if(String(v).trim()) o[c.dataset.k]=v;});
+  try{localStorage.setItem(localKey,JSON.stringify(o));}catch(e){}
+ }
+ function localLoad(){
+  try{
+   var o=JSON.parse(localStorage.getItem(localKey)||"{}");
+   cells.forEach(function(c){if(o[c.dataset.k]!==undefined)setValue(c,o[c.dataset.k]);});
+  }catch(e){}
+ }
+ async function requestAll(){
+  var r=await fetch(API,{method:"GET",cache:"no-store"});
+  if(!r.ok) throw new Error("공용 데이터 조회 실패 ("+r.status+")");
+  return await r.json();
+ }
+ async function pushField(key,value){
+  pending[key]=true;
+  if(status) status.textContent="공용 서버 저장 중…";
+  try{
+   var r=await fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({key:key,value:String(value)})});
+   if(!r.ok) throw new Error("저장 실패 ("+r.status+")");
+   lastSeen[key]=String(value);
+   delete pending[key];
+   if(status) status.textContent="공용 서버 동기화 완료 · "+new Date().toLocaleTimeString("ko-KR");
+  }catch(e){
+   delete pending[key];
+   if(status) status.textContent="서버 저장 실패 · 연결을 확인하세요";
+  }
+ }
+ function queueField(c){
+  var key=c.dataset.k, value=getValue(c);
+  localSave();
+  if(!serverReady) return;
+  clearTimeout(timers[key]);
+  timers[key]=setTimeout(function(){pushField(key,value);},350);
+ }
+ function val(key){
+  var el=document.querySelector('[data-k="'+key+'"]');
+  return el ? String(getValue(el)).trim() : "";
+ }
+ function total(){
+  var grand={tm:0,visit:0,contract:0};
+  document.querySelectorAll(".daily-totals td[id^='day-']").forEach(function(el){el.textContent="0";});
+  var rows=document.querySelectorAll(".summary-inputs");
+  rows.forEach(function(row,idx){
+   var tmEl=row.querySelector('[data-k$="-tm"]'), visitEl=row.querySelector('[data-k$="-visit"]'), contractEl=row.querySelector('[data-k$="-contract"]');
+   var tm=tmEl&&tmEl.value?parseInt(tmEl.value,10)||0:0, visit=visitEl&&visitEl.value?parseInt(visitEl.value,10)||0:0, contract=contractEl&&contractEl.value?parseInt(contractEl.value,10)||0:0;
+   var rowTotal=tm+visit+contract, out=document.getElementById("row-"+row.dataset.summaryRow);
+   if(out) out.textContent="합계 "+rowTotal+"건";
+   var day=Math.floor(idx/4);
+   [["tm",tm],["visit",visit],["contract",contract]].forEach(function(pair){
+    var el=document.getElementById("day-"+day+"-"+pair[0]); if(el) el.textContent=(parseInt(el.textContent,10)||0)+pair[1]; grand[pair[0]]+=pair[1];
+   });
+   var dayTotal=document.getElementById("day-"+day+"-total"); if(dayTotal) dayTotal.textContent=(parseInt(dayTotal.textContent,10)||0)+rowTotal;
+  });
+  ["tm","visit","contract"].forEach(function(k){var el=document.getElementById("grand-"+k);if(el)el.textContent=grand[k].toLocaleString("ko-KR");});
+  var gt=document.getElementById("grand-total");if(gt)gt.textContent=(grand.tm+grand.visit+grand.contract).toLocaleString("ko-KR");
+ }
+ function generateSummary(){
+  var names=["김종현 대리","조문영 대리","최지은 사원","황혜진 사원"], lines=[];
+  lines.push("■ 기간 중 영업활동 실적");
+  lines.push("TM "+document.getElementById("grand-tm").textContent+"건 / 방문 "+document.getElementById("grand-visit").textContent+"건 / 계약 "+document.getElementById("grand-contract").textContent+"건 (총 "+document.getElementById("grand-total").textContent+"건)");
+  lines.push(""); lines.push("■ 직원별 실적");
+  names.forEach(function(name,i){
+   var sums={tm:0,visit:0,contract:0};
+   document.querySelectorAll(".summary-inputs").forEach(function(row,idx){
+    if(idx%4!==i)return;
+    ["tm","visit","contract"].forEach(function(k){var input=row.querySelector('[data-k$="-'+k+'"]');sums[k]+=input&&input.value?parseInt(input.value,10)||0:0;});
+   });
+   lines.push(name+": TM "+sums.tm+"건, 방문 "+sums.visit+"건, 계약 "+sums.contract+"건 (총 "+(sums.tm+sums.visit+sums.contract)+"건)");
+  });
+  lines.push(""); lines.push("■ 주요 성과·이슈 및 향후 계획");
+  names.forEach(function(name,i){var achievement=val("c"+(105+i*2)), plan=val("c"+(106+i*2));if(achievement)lines.push(name+" 주요 성과·이슈: "+achievement);if(plan)lines.push(name+" 향후 계획: "+plan);});
+  var out=document.querySelector('[data-k="report-summary"]');
+  if(out){out.textContent=lines.join("\n");queueField(out);}
+ }
+ function csvEscape(value){return '"'+String(value==null?"":value).replace(/"/g,'""')+'"';}
+ function exportCSV(){
+  var lines=[];
+  lines.push(["일자","담당자","영업활동 계획","계획 상세","활동 결과","TM 건수","방문 건수","계약 건수","합계"].map(csvEscape).join(","));
+  var dailyRows=document.querySelectorAll("table:not(.daily-totals) tbody tr.blk");
+  var dateLabels=["10/22(목)","10/23(금)","10/26(월)","10/27(화)","10/28(수)","10/29(목)","10/30(금)"];
+  dailyRows.forEach(function(tr,idx){
+   var group=Math.floor(idx/4), who=tr.querySelector("th.who"), selects=tr.querySelector("select"), planDetail=tr.querySelector(".plan-detail"), editable=tr.querySelectorAll('[contenteditable="true"]'), inputs=tr.querySelectorAll("input.summary-number");
+   var tm=inputs[0]?inputs[0].value:"",visit=inputs[1]?inputs[1].value:"",contract=inputs[2]?inputs[2].value:"",sum=(parseInt(tm,10)||0)+(parseInt(visit,10)||0)+(parseInt(contract,10)||0);
+   lines.push([dateLabels[group]||"",who?who.textContent:"",selects?selects.value:"",planDetail?planDetail.value:"",editable[0]?editable[0].textContent:"",tm,visit,contract,sum].map(csvEscape).join(","));
+  });
+  lines.push("");lines.push(["직원별 주요 성과·이슈 및 향후 계획"].map(csvEscape).join(","));lines.push(["담당자","주요 성과 및 이슈","향후 계획"].map(csvEscape).join(","));
+  ["김종현 대리","조문영 대리","최지은 사원","황혜진 사원"].forEach(function(name,i){lines.push([name,val("c"+(105+i*2)),val("c"+(106+i*2))].map(csvEscape).join(","));});
+  lines.push("");lines.push(["보고용 요약",val("report-summary")].map(csvEscape).join(","));
+  var blob=new Blob(["\uFEFF"+lines.join("\r\n")],{type:"text/csv;charset=utf-8;"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download="일별_영업활동_보고_2026-10.csv";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+ }
+ async function syncFromServer(initial){
+  if(polling)return; polling=true;
+  try{
+   var data=await requestAll();
+   if(initial){
+    cells.forEach(function(c){var k=c.dataset.k;if(Object.prototype.hasOwnProperty.call(data,k)){setValue(c,data[k]);lastSeen[k]=String(data[k]);}});
+    serverReady=true; localSave(); total();
+    if(status)status.textContent="공용 보고서 연결 완료 · 실시간 동기화";
+   }else{
+    var changed=false, active=document.activeElement;
+    cells.forEach(function(c){
+     var k=c.dataset.k;
+     if(!Object.prototype.hasOwnProperty.call(data,k))return;
+     var remote=String(data[k]);
+     if(pending[k] || active===c)return;
+     if(lastSeen[k]!==remote){setValue(c,remote);lastSeen[k]=remote;changed=true;}
+    });
+    if(changed){localSave();total();}
+    if(status && serverReady && !Object.keys(pending).length)status.textContent="공용 보고서 동기화 완료 · "+new Date().toLocaleTimeString("ko-KR");
+   }
+  }catch(e){
+   if(initial){
+    localLoad();total();
+    if(status)status.textContent="공용 서버 연결 실패 · 로컬 임시 입력 모드";
+   }else if(status && serverReady){status.textContent="동기화 일시 중단 · 재연결 시도 중";}
+  }finally{polling=false;}
+ }
+ cells.forEach(function(c){
+  c.addEventListener("input",function(){total();queueField(c);});
+  if(c.tagName==="SELECT")c.addEventListener("change",function(){queueField(c);});
+ });
+ total();
+ document.getElementById("print").onclick=function(){localSave();window.print();};
+ var genButton=document.getElementById("generate-summary");if(genButton)genButton.onclick=generateSummary;
+ var csvButton=document.getElementById("export-csv");if(csvButton)csvButton.onclick=function(){localSave();exportCSV();};
+ syncFromServer(true).then(function(){setInterval(function(){syncFromServer(false);},3000);});
+})();
+</script></body></html>
